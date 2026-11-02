@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이츠누리 | 시설 식자재 공급 파트너</title>
+<meta name="description" content="어린이집부터 주간보호센터까지, 시설 운영에 필요한 식자재를 안정적으로 공급하는 이츠누리">
+<style>
+:root{--g:#2B6E45;--o:#D4713A;--n:#1C2B4A;--bg:#fff;--bg2:#F4F7F3;--tx:#1d2420;--mu:#5c6a62;--ln:#dfe6e0;--card:#fff;--hero:#EAF3EC;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g:#5fb383;--o:#e8905c;--bg:#121714;--bg2:#1a211d;--tx:#eef3ef;--mu:#a3b1a8;--ln:#2c3630;--card:#1a211d;--hero:#17241c}}
+:root[data-theme="dark"]{--g:#5fb383;--o:#e8905c;--bg:#121714;--bg2:#1a211d;--tx:#eef3ef;--mu:#a3b1a8;--ln:#2c3630;--card:#1a211d;--hero:#17241c}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--ln)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:20px;color:var(--g);letter-spacing:-.5px}
+.logo img{display:block;height:40px;width:auto}@media(max-width:720px){.logo img{height:34px}}
+.logo small{display:block;font-size:9px;letter-spacing:2px;color:var(--o);font-weight:700;line-height:1}
+nav{display:flex;gap:20px;font-size:14px;font-weight:500;overflow-x:auto}
+nav a{white-space:nowrap;color:var(--mu)}nav a:hover{color:var(--g)}
+@media(max-width:720px){nav a:nth-child(n+4){display:none}}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:700;font-size:15px;border:2px solid var(--g);background:var(--g);color:#fff;cursor:pointer;font-family:inherit}
+.btn.o{background:var(--o);border-color:var(--o)}
+.btn.l{background:transparent;color:var(--g)}
+.hero{background:var(--hero);padding:72px 0 64px}
+.eyebrow{color:var(--o);font-weight:700;letter-spacing:3px;font-size:13px}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.3;margin:10px 0 16px;letter-spacing:-1px;color:var(--n)}
+@media(prefers-color-scheme:dark){h1{color:var(--tx)}}
+.hero p{color:var(--mu);font-size:17px;max-width:560px;margin:0 0 28px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:64px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(22px,3.5vw,30px);margin:0 0 8px;letter-spacing:-.5px}
+.sub{color:var(--mu);margin:0 0 32px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:22px}
+.card h3{margin:0 0 6px;font-size:17px;color:var(--g)}
+.card p{margin:0;color:var(--mu);font-size:14px}
+.ic{font-size:26px;margin-bottom:8px}
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.steps div{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:20px 20px 20px 64px;position:relative}
+.steps div:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--o);color:#fff;font-weight:800;display:grid;place-items:center}
+.steps b{display:block}.steps span{color:var(--mu);font-size:14px}
+.notice{list-style:none;margin:0;padding:0}
+.notice li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--ln);font-size:15px}
+.notice em{font-style:normal;color:var(--o);font-weight:700;min-width:70px;font-size:13px}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:24px}
+.row{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+label{font-size:13px;font-weight:700;display:grid;gap:5px}
+input,select,textarea{font:inherit;padding:11px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--tx)}
+.chk{display:flex;gap:8px;font-weight:400;color:var(--mu);align-items:flex-start}
+.ok{display:none;padding:14px;border-radius:8px;background:var(--hero);color:var(--g);font-weight:700}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+footer{background:var(--n);color:#cfd6e3;padding:36px 0;font-size:13px}
+footer b{color:#fff}
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;z-index:30}
+.fab a{padding:12px 16px;border-radius:999px;color:#fff;font-weight:700;font-size:14px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+
+.pcard{cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;transition:transform .15s,border-color .15s}
+.pcard:hover,.pcard:focus-visible{transform:translateY(-3px);border-color:var(--o);outline:none}
+.pcard .go{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--o)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:50;display:none;align-items:center;justify-content:center;padding:12px}
+.modal.on{display:flex}
+.mbox{background:var(--bg);border-radius:14px;max-width:96vw;max-height:94vh;overflow:auto;padding:16px 18px 18px;position:relative}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:16px}
+.mhead b{font-size:18px;color:var(--g)}
+.mx{border:0;background:var(--bg2);color:var(--tx);width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:0 0 10px}.chips:empty{display:none}
+.chip{flex:none;border:1px solid var(--ln);background:var(--bg2);color:var(--tx);border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--g);color:#fff;border-color:var(--g)}
+.mbody{overflow:auto;max-height:calc(94vh - 110px);border-radius:8px;-webkit-overflow-scrolling:touch}
+.imgs{display:flex;gap:12px;justify-content:center;width:max-content;min-width:100%}
+.imgs img{max-width:none;height:auto;border:1px solid var(--ln);border-radius:6px;background:#fff;cursor:zoom-in;flex:none}
+.imgs.col{flex-direction:column;align-items:center}
+.zc{display:flex;align-items:center;gap:6px;margin-left:auto}
+.zc button{border:1px solid var(--ln);background:var(--bg2);color:var(--tx);width:34px;height:34px;border-radius:8px;font-size:18px;font-weight:700;cursor:pointer}
+.zc span{min-width:48px;text-align:center;font-size:13px;color:var(--mu)}
+.hint{margin:10px 0 0;font-size:12px;color:var(--mu);text-align:center}
+
+.nrow{display:flex;align-items:center;gap:16px;width:100%;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:18px 20px;cursor:pointer;margin-bottom:12px}
+.nrow:hover{border-color:var(--o)}
+.nrow b{min-width:110px;color:var(--g);font-size:17px}
+.nrow .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}
+.nrow .d{color:var(--mu);font-size:13px;white-space:nowrap}
+.new{background:var(--o);color:#fff;font-size:11px;font-weight:800;padding:1px 6px;border-radius:4px;margin-right:6px}
+@media(max-width:600px){.nrow{flex-wrap:wrap;gap:4px 12px}.nrow .t{flex-basis:100%;order:3}}
+.btable{width:100%;border-collapse:collapse;font-size:14px}
+.btable th{border-top:2px solid var(--tx);border-bottom:1px solid var(--ln);padding:10px;background:var(--bg2)}
+.btable td{border-bottom:1px solid var(--ln);padding:13px 10px;text-align:center;color:var(--mu)}
+.btable td.tt{text-align:left;color:var(--tx);cursor:pointer}
+.btable td.tt:hover{color:var(--o);text-decoration:underline}
+.bmeta{color:var(--mu);font-size:13px;margin:0 0 6px}
+.bpost{border-top:2px solid var(--tx);border-bottom:1px solid var(--ln);padding:18px 4px;white-space:pre-wrap;line-height:1.85;min-height:160px}
+.bback{margin-top:14px}
+.ah{margin:28px 0 10px;font-size:18px;color:var(--g)}.ah:first-child{margin-top:0}
+.arow{display:flex;gap:14px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.al{display:flex;flex-direction:column;gap:2px;min-width:0}.al b{font-size:16px}.as{color:var(--mu);font-size:14px}.am{color:var(--o);font-size:12px;font-weight:700}
+.ab{display:flex;gap:8px;flex:none}.ab .btn{padding:8px 14px;font-size:13px}
+@media(max-width:600px){.arow{flex-direction:column;align-items:flex-start}}
+.bimg{display:block;margin:14px 0}.bimg img{max-width:100%;border:1px solid var(--ln);border-radius:8px}
+.bfiles{margin:14px 0;padding:12px 14px;background:var(--bg2);border-radius:8px;display:flex;flex-direction:column;gap:6px;font-size:14px}.bfiles a{color:var(--g);text-decoration:underline}
+
+html{scroll-behavior:auto}body{overflow-x:hidden}
+.pg{display:none}.pg.on{display:block}
+section.pg{min-height:62vh}
+.burger{display:none}
+@keyframes slL{from{opacity:.2;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes slR{from{opacity:.2;transform:translateX(-40px)}to{opacity:1;transform:none}}
+.pg.sl{animation:slL .28s ease}.pg.sr{animation:slR .28s ease}
+nav a.act{color:var(--g);font-weight:700}
+nav a{padding:6px 2px;border-bottom:2px solid transparent}
+nav a.act{border-bottom-color:var(--o)}
+@media(max-width:720px){
+.nav{flex-wrap:wrap;height:auto;padding-top:8px}
+nav{order:3;width:100%;padding:2px 0 8px;gap:18px}
+nav a{display:inline-block!important}
+}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="#home" aria-label="이츠누리 홈"><img src="images/logo.png" alt="이츠누리 CONNECTING EVERY TABLE" width="150" height="40"></a>
+<nav><a href="#home">홈</a><a href="#about">회사소개</a><a href="#supply">식자재 공급</a><a href="#guide">공급 안내</a><a href="#archive">자료실</a><a href="#news">식자재 정보</a></nav>
+<a class="btn o" href="#contact" style="padding:8px 14px;font-size:13px">상담 신청</a>
+<button class="burger" type="button" aria-label="메뉴">☰</button></div></header>
+
+<main id="home">
+<div class="hero"><div class="w">
+<div class="eyebrow">FOOD SERVICE PARTNER</div>
+<h1>매일의 식탁을 위한<br>믿을 수 있는 공급 파트너</h1>
+<p>어린이집부터 주간보호센터까지, 시설 운영에 필요한 식자재를 안정적으로 공급합니다.</p>
+<div class="btns"><a class="btn o" href="#contact">공급 상담 신청</a><a class="btn l" href="#supply">사업 분야 알아보기</a></div>
+</div></div>
+
+<section id="about"><div class="w">
+<h2>회사소개</h2><p class="sub">모두의 식탁을 잇다 — 이츠누리는 시설의 하루 식사를 책임지는 식자재 공급 파트너입니다.</p>
+<div class="grid">
+<div class="card"><div class="ic">🤝</div><h3>시설 맞춤 공급</h3><p>시설 규모와 식단에 맞춰 품목과 수량을 조율합니다.</p></div>
+<div class="card"><div class="ic">🚚</div><h3>안정적인 공급 체계</h3><p>동원홈푸드 & CJ프레시웨이 물류망 기반으로 정시 배송을 지향합니다.</p></div>
+<div class="card"><div class="ic">📞</div><h3>담당자 직접 관리</h3><p>주문부터 사후 응대까지 전담 담당자가 연결됩니다.</p></div>
+</div></div></section>
+
+<section id="supply" class="alt"><div class="w">
+<h2>식자재 공급</h2><p class="sub">분류를 누르면 이번 기간 상품 프로모션(상품·단가)을 확인할 수 있습니다.</p>
+<div class="grid" id="supplyGrid"></div>
+</div></section>
+
+<section id="guide"><div class="w">
+<h2>공급 안내</h2><p class="sub">거래는 네 단계로 간단하게 진행됩니다.</p>
+<div class="steps">
+<div><b>상담 신청</b><span>전화·카카오톡·온라인 폼</span></div>
+<div><b>품목·단가 협의</b><span>시설 식단에 맞춰 견적 제공</span></div>
+<div><b>거래 개시</b><span>주문 방식과 배송 요일 확정</span></div>
+<div><b>정기 공급·관리</b><span>담당자가 지속 관리</span></div>
+</div>
+<div class="cta"><a class="btn l" href="#contact">공급 안내서 요청</a></div>
+</div></section>
+
+<section id="archive"><div class="w">
+<h2>자료실</h2><p class="sub">카탈로그와 서류 양식을 내려받아 상담 전에 미리 보시거나 바로 활용하세요.</p>
+<div id="archList"></div><p id="archEmpty" class="sub" style="display:none">등록된 자료가 없습니다. 곧 자료를 올려 드리겠습니다.</p>
+</div></section>
+<section id="news" class="alt"><div class="w">
+<h2>식자재 정보</h2><p class="sub">식자재 정보·시황·추천 식단표의 최신 글입니다. 누르면 전체 목록이 열립니다.</p>
+<div id="newsList"></div>
+</div></section>
+
+<section id="contact"><div class="w" style="max-width:720px">
+<h2>상담 및 견적 문의</h2><p class="sub">시설 정보를 남겨 주시면 담당자가 연락드립니다.</p>
+<form id="f" name="consult" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="consult"><p hidden><label>사람은 비워두세요 <input name="bot-field"></label></p>
+<div class="row"><label>시설 유형<select name="t" required><option value="">선택</option><option>어린이집</option><option>유치원</option><option>지역아동센터</option><option>주간보호센터</option><option>기타</option></select></label>
+<label>시설명<input name="n" required></label></div>
+<div class="row"><label>담당자<input name="m" required></label><label>연락처<input name="p" type="tel" placeholder="010-0000-0000" required></label></div>
+<label>월 예상 식자재 사용액<select name="b"><option value="">선택 (선택사항)</option><option>100만원 미만</option><option>100~300만원</option><option>300~500만원</option><option>500만원 이상</option></select></label>
+<label>상담 요청 내용<textarea name="q" rows="4"></textarea></label>
+<label class="chk"><input type="checkbox" required> 상담 목적의 개인정보 수집·이용(성명, 연락처 / 상담 완료 후 파기)에 동의합니다.</label>
+<button class="btn o" type="submit">상담 신청하기</button>
+<div class="ok" id="ok">메일 앱이 열리면 '보내기'를 눌러 주세요. 열리지 않으면 yatspower@naver.com으로 보내 주세요.</div>
+</form></div></section>
+</main>
+
+<footer><div class="w"><b>이츠누리</b> · 운영사 솔루션아이<br>경북/경남권 종합식자재 공급<br>전화 010-4811-2944 · 카카오톡 ID yatspower<br>이메일 <a href="mailto:yatspower@naver.com" style="color:#fff;text-decoration:underline">yatspower@naver.com</a><br><span style="opacity:.6">© 이츠누리. All rights reserved.</span></div></footer>
+
+<div class="fab"><a href="tel:01048112944" style="background:var(--g)">📞 전화</a><a href="#contact" style="background:var(--o)">💬 상담</a></div>
+
+<script src="data/config.js"></script>
+<script src="data/posts.js"></script>
+<div class="modal" id="bm" role="dialog" aria-modal="true"><div class="mbox" style="width:min(860px,96vw)"><div class="mhead"><b id="bt"></b><button class="mx" id="bx" aria-label="닫기">✕</button></div><div id="bc"></div></div></div>
+<script>
+(function(){
+function sortP(a){return a.slice().sort(function(x,y){return x.date<y.date?1:x.date>y.date?-1:y.id-x.id;});}
+var P=sortP(window.POSTS||[]);
+var C=[{k:'info',n:'식자재 정보'},{k:'market',n:'시황'},{k:'menu',n:'추천 식단표'}];
+var L=document.getElementById('newsList'),bm=document.getElementById('bm'),bt=document.getElementById('bt'),bc=document.getElementById('bc');
+function by(k){return P.filter(function(p){return p.cat===k;});}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+function fresh(d){return Date.now()-new Date(d).getTime()<7*864e5;}
+function showList(c){var ps=by(c.k);bt.textContent=c.n;bc.innerHTML='';
+bc.appendChild(el('p','bmeta','총 '+ps.length+'건'));
+var t=el('table','btable'),h=el('tr');['번호','제목','첨부','등록일'].forEach(function(x){h.appendChild(el('th','',x));});t.appendChild(h);
+ps.forEach(function(p,i){var r=el('tr');r.appendChild(el('td','',String(ps.length-i)));var td=el('td','tt');
+if(fresh(p.date))td.appendChild(el('span','new','NEW'));td.appendChild(document.createTextNode(p.title));td.onclick=function(){showPost(c,p);};
+r.appendChild(td);r.appendChild(el('td','',(p.files&&p.files.length)?'📎':''));r.appendChild(el('td','',p.date));t.appendChild(r);});
+if(!ps.length){var r=el('tr'),td=el('td','','등록된 글이 없습니다');td.colSpan=4;r.appendChild(td);t.appendChild(r);}
+bc.appendChild(t);bm.classList.add('on');bm.scrollTop=0;}
+function showPost(c,p){bc.innerHTML='';bc.appendChild(el('h3','',p.title));bc.appendChild(el('p','bmeta',c.n+' · '+p.date));
+var bp=el('div','bpost');
+String(p.body||'').split(/(\[사진:[^\]]+\])/).forEach(function(seg){var m=seg.match(/^\[사진:([^\]]+)\]$/);
+if(m){var a=el('a','bimg'),u=U(G(m[1].indexOf('/')>=0?m[1]:'files/'+m[1]));a.href=u;a.target='_blank';a.rel='noopener';var i=el('img');i.src=u;i.alt=p.title;a.appendChild(i);bp.appendChild(a);}
+else{seg=seg.replace(/^\n|\n$/g,'');if(seg)bp.appendChild(document.createTextNode(seg));}});
+bc.appendChild(bp);
+function U(x){return /^(data:|https?:)/.test(x)?x:x.split('/').map(encodeURIComponent).join('/');}
+function G(x){var m=/drive\.google\.com\/file\/d\/([\w-]+)/.exec(x);return m?'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w1600':x;}
+(p.imgs||[]).forEach(function(s){var a=el('a','bimg');a.href=U(G(s));a.target='_blank';a.rel='noopener';var i=el('img');i.src=U(G(s));i.alt=p.title;a.appendChild(i);bc.appendChild(a);});
+if(p.files&&p.files.length){var fb=el('div','bfiles');fb.appendChild(el('b','','첨부파일'));p.files.forEach(function(f){var a=el('a','','📎 '+f.n);a.href=U(f.p);a.download=f.n;a.target='_blank';fb.appendChild(a);});bc.appendChild(fb);}
+var b=el('button','btn l bback','← 목록으로');b.type='button';b.onclick=function(){showList(c);};bc.appendChild(b);}
+function draw(){L.innerHTML='';C.forEach(function(c){var ps=by(c.k),r=el('button','nrow');r.type='button';r.appendChild(el('b','',c.n));
+var t=el('span','t');if(ps[0]){if(fresh(ps[0].date))t.appendChild(el('span','new','NEW'));t.appendChild(document.createTextNode(ps[0].title));}else t.textContent='등록된 글이 없습니다';
+r.appendChild(t);r.appendChild(el('span','d',ps[0]?ps[0].date:''));r.onclick=function(){showList(c);};L.appendChild(r);});}
+draw();
+function csv(t){var R=[],r=[],f='',q=false,i=0,ch;for(;i<t.length;i++){ch=t[i];if(q){if(ch=='"'){if(t[i+1]=='"'){f+='"';i++;}else q=false;}else f+=ch;}else if(ch=='"')q=true;else if(ch==','){r.push(f);f='';}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(f);f='';R.push(r);r=[];}else f+=ch;}if(f!==''||r.length){r.push(f);R.push(r);}return R;}
+window.csvParse=csv;
+function fromSheet(t){var K={'식자재 정보':'info','시황':'market','추천 식단표':'menu'},out=[];
+csv(t.replace(/^\uFEFF/,'')).slice(1).forEach(function(r,i){var k=K[(r[0]||'').trim()],ti=(r[1]||'').trim(),m=(r[2]||'').match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);if(!k||!ti||!m)return;
+var p={id:i+1,cat:k,title:ti,date:m[1]+'-'+('0'+m[2]).slice(-2)+'-'+('0'+m[3]).slice(-2),body:r[3]||''};
+var im=(r[4]||'').split(/\s+/).filter(Boolean);if(im.length)p.imgs=im;
+var fl=(r[5]||'').split(/\n/).map(function(x){var s=x.split('|');return s.length>1?{n:s[0].trim(),p:s.slice(1).join('|').trim()}:null;}).filter(Boolean);if(fl.length)p.files=fl;out.push(p);});return out;}
+if(window.SHEET_CSV_URL){fetch(window.SHEET_CSV_URL).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){var a=fromSheet(t);if(a.length){P=sortP(a);draw();}}).catch(function(){});}
+function close(){bm.classList.remove('on');}
+document.getElementById('bx').onclick=close;
+bm.addEventListener('click',function(e){if(e.target===bm)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&bm.classList.contains('on'))close();});
+})();
+</script>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="mbox"><div class="mhead"><b id="mtitle"></b><div class="zc"><button type="button" id="zo" aria-label="축소">−</button><span id="zl">100%</span><button type="button" id="zi" aria-label="확대">＋</button></div><button class="mx" id="mx" aria-label="닫기">✕</button></div><div class="chips" id="chips"></div><div class="mbody" id="mbody"><div class="imgs" id="mimgs"></div></div><p class="hint">사진을 누르거나 ＋ 버튼을 누르면 확대됩니다. 확대한 뒤에는 밀어서 이동하세요.</p></div></div>
+<script>
+/* ★ 상품 프로모션 이미지 설정 ★
+   images 폴더 안의 같은 이름 파일만 바꿔 넣으면 팝업 내용이 바뀝니다.
+   사진 장수를 바꾸려면 imgs 목록에 파일 경로를 추가하거나 빼면 됩니다. */
+var CATEGORIES=[
+{name:'농산',icon:'🥬',desc:'채소·과일·전처리 농산물',imgs:['images/nongsan-1.png','images/nongsan-2.png']},
+{name:'수산',icon:'🐟',desc:'생선·건어물·수산 가공품',imgs:['images/susan.png']},
+{name:'축산',icon:'🥩',desc:'육류·계란·축산 가공품',imgs:['images/chuksan.png']},
+{name:'공산품',icon:'📦',desc:'김치·유제품·냉동·가공식품',imgs:['images/gongsan.png']},
+{name:'전용상품',icon:'🏷️',desc:'동원홈푸드 be chef. 전용 상품',imgs:['images/dongwon.png']},
+{name:'간식',icon:'🍪',desc:'빵·음료·이팜키즈 간식',imgs:['images/snack-1.png','images/snack-2.png']},
+{name:'비식품',icon:'🧴',desc:'주방 소모품·위생용품',imgs:['images/bisikpum.png']}
+];
+(function(){
+var g=document.getElementById('supplyGrid'),m=document.getElementById('modal'),mi=document.getElementById('mimgs'),mt=document.getElementById('mtitle'),mb=document.getElementById('mbody'),zl=document.getElementById('zl');
+var STEPS=[1,1.5,2,3,4],z=1,n=0;
+function base(){var W=innerWidth,H=innerHeight,row=W>=900&&n>1,avail=W*0.92-40;
+var byW=row?(avail-12*(n-1))/n:avail,byH=(H*0.78)*720/1040;return Math.min(byW,byH);}
+function layout(){var b=base();[].forEach.call(mi.children,function(i){i.style.width=Math.round(b*z)+'px';i.style.cursor=z>=2?'zoom-out':'zoom-in';});
+mi.className='imgs'+((innerWidth<900&&n>1)?' col':'');zl.textContent=Math.round(z*100)+'%';}
+function setZ(v){z=v;layout();}
+function step(d){var i=STEPS.indexOf(z);if(i<0)i=0;i=Math.max(0,Math.min(STEPS.length-1,i+d));setZ(STEPS[i]);}
+var PROMO={},ch=document.getElementById('chips');
+function G(x){var q=/drive\.google\.com\/file\/d\/([\w-]+)/.exec(x);return q?'https://drive.google.com/thumbnail?id='+q[1]+'&sz=w2000':x;}
+function sets(c){return PROMO[c.name]||[{t:'',imgs:c.imgs}];}
+function show(c,k){var S=sets(c),s=S[k]||S[0];mt.textContent=c.name+' 상품 프로모션';ch.innerHTML='';
+if(S.length>1)S.forEach(function(x,j){var q=document.createElement('button');q.type='button';q.className='chip'+(j===k?' on':'');q.textContent=(j===0?'최신 · ':'')+(x.t||'현재');q.onclick=function(){show(c,j);};ch.appendChild(q);});
+mi.innerHTML='';n=s.imgs.length;z=1;
+s.imgs.forEach(function(u){var i=document.createElement('img');i.src=G(u);i.alt=c.name+' 상품 프로모션';i.onclick=function(){setZ(z>=2?1:2);};mi.appendChild(i);});
+layout();mb.scrollTop=0;mb.scrollLeft=0;}
+function loadPromo(){if(!window.PROMO_CSV_URL||!window.csvParse)return;
+fetch(window.PROMO_CSV_URL).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){var o={};
+window.csvParse(t.replace(/^\uFEFF/,'')).slice(1).forEach(function(r,i){var k=(r[0]||'').trim(),d=(r[2]||'').match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/),im=(r[3]||'').split(/\s+/).filter(Boolean);
+if(!im.length||!CATEGORIES.some(function(c){return c.name===k;}))return;
+var ds=d?d[1]+'-'+('0'+d[2]).slice(-2)+'-'+('0'+d[3]).slice(-2):'';(o[k]=o[k]||[]).push({t:(r[1]||'').trim()||ds,d:ds,i:i,imgs:im});});
+Object.keys(o).forEach(function(k){o[k].sort(function(a,b){return a.d<b.d?1:a.d>b.d?-1:b.i-a.i;});});PROMO=o;}).catch(function(){});}
+loadPromo();
+CATEGORIES.forEach(function(c){
+var b=document.createElement('button');b.type='button';b.className='card pcard';
+b.innerHTML='<div class="ic">'+c.icon+'</div><h3>'+c.name+'</h3><p>'+c.desc+'</p><span class="go">상품 보기 ▸</span>';
+b.onclick=function(){show(c,0);m.classList.add('on');};
+g.appendChild(b);});
+function close(){m.classList.remove('on');}
+document.getElementById('mx').onclick=close;
+document.getElementById('zi').onclick=function(){step(1);};
+document.getElementById('zo').onclick=function(){step(-1);};
+m.addEventListener('click',function(e){if(e.target===m)close();});
+document.addEventListener('keydown',function(e){if(!m.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='+'||e.key==='=')step(1);if(e.key==='-')step(-1);});
+addEventListener('resize',function(){if(m.classList.contains('on'))layout();});
+})();
+</script>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var d=new FormData(e.target);
+var msg='[이츠누리 공급상담]\n유형:'+d.get('t')+'\n시설:'+d.get('n')+'\n담당:'+d.get('m')+'\n연락처:'+d.get('p')+'\n월사용액:'+(d.get('b')||'-')+'\n요청:'+(d.get('q')||'-');
+var ok=document.getElementById('ok');var mail=function(){ok.textContent='자동 접수가 연결되지 않아 메일 앱을 엽니다. 열리면 보내기를 눌러 주세요. (yatspower@naver.com)';ok.style.display='block';location.href='mailto:yatspower@naver.com?subject='+encodeURIComponent('[이츠누리] 공급 상담 신청 - '+d.get('n'))+'&body='+encodeURIComponent(msg);};fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()}).then(function(r){if(!r.ok)throw new Error('fail');ok.textContent='상담 신청이 접수되었습니다. 빠르게 연락드리겠습니다.';ok.style.display='block';e.target.reset();}).catch(mail);
+});
+</script>
+<script>
+(function(){
+var G=[{k:'카탈로그',n:'카탈로그'},{k:'서류양식',n:'서류 양식'},{k:'월간자료',n:'월간 자료'}],L=document.getElementById('archList'),E=document.getElementById('archEmpty'),D=[];
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+function U(x){x=x.trim();return /^https?:/.test(x)?x:(x.indexOf('/')>=0?x:'files/'+x).split('/').map(encodeURIComponent).join('/');}
+function dl(u){var m=/drive\.google\.com\/file\/d\/([\w-]+)/.exec(u);return m?'https://drive.google.com/uc?export=download&id='+m[1]:'';}
+function draw(){L.innerHTML='';E.style.display=D.length?'none':'block';
+G.forEach(function(g){var ps=D.filter(function(x){return x.k===g.k;});if(!ps.length)return;L.appendChild(el('h3','ah',g.n));
+ps.forEach(function(p){var r=el('div','arow'),l=el('div','al');l.appendChild(el('b','',p.t));if(p.s)l.appendChild(el('span','as',p.s));
+var m=[p.f,p.d].filter(Boolean).join(' · ');if(m)l.appendChild(el('span','am',m));r.appendChild(l);
+var b=el('div','ab'),u=U(p.u),d=dl(u),a=el('a','btn l',d?'보기':'열기');a.href=u;a.target='_blank';a.rel='noopener';b.appendChild(a);
+if(d){var c=el('a','btn o','내려받기');c.href=d;c.target='_blank';c.rel='noopener';b.appendChild(c);}
+r.appendChild(b);L.appendChild(r);});});}
+function fromRes(t){var K={'카탈로그':1,'서류양식':1,'월간자료':1},out=[];
+window.csvParse(t.replace(/^\uFEFF/,'')).slice(1).forEach(function(r,i){var k=(r[0]||'').replace(/\s/g,''),ti=(r[1]||'').trim(),u=(r[4]||'').trim(),m=(r[3]||'').match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
+if(!K[k]||!ti||!u)return;out.push({k:k,t:ti,s:(r[2]||'').trim(),d:m?m[1]+'-'+('0'+m[2]).slice(-2)+'-'+('0'+m[3]).slice(-2):'',u:u,f:(r[5]||'').trim(),i:i});});
+return out.sort(function(a,b){return a.d<b.d?1:a.d>b.d?-1:b.i-a.i;});}
+draw();
+if(window.RESOURCE_CSV_URL&&window.csvParse){fetch(window.RESOURCE_CSV_URL).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){D=fromRes(t);draw();if(!D.length)console.warn('자료실: 읽을 수 있는 줄이 없습니다. 자료실 탭이 웹에 게시되었는지, 첫 줄이 구분·제목·설명·날짜·링크·형식인지 확인하세요.');}).catch(function(){});}
+})();
+</script>
+<script>
+(function(){
+var IDS=['home','about','supply','guide','archive','news','contact'],els={home:document.querySelector('.hero')},cur=null;
+IDS.slice(1).forEach(function(i){els[i]=document.getElementById(i);});
+IDS.forEach(function(i){els[i].classList.add('pg');});
+function show(){var h=(location.hash||'#home').slice(1);if(!els[h])h='home';var d=cur?IDS.indexOf(h)-IDS.indexOf(cur):0;
+IDS.forEach(function(i){els[i].classList.toggle('on',i===h);});
+[].forEach.call(document.querySelectorAll('nav a'),function(a){a.classList.toggle('act',a.getAttribute('href')==='#'+h);});
+window.scrollTo(0,0);
+if(d){var e=els[h];e.classList.remove('sl','sr');void e.offsetWidth;e.classList.add(d>0?'sl':'sr');}
+cur=h;var ac=document.querySelector('nav a.act');if(ac&&ac.scrollIntoView)ac.scrollIntoView({inline:'center',block:'nearest'});}
+addEventListener('hashchange',show);show();
+var sx,sy,st,skip;
+document.addEventListener('touchstart',function(e){var t=e.target,c=e.touches[0];skip=e.touches.length>1||document.querySelector('.modal.on')||(t.closest&&t.closest('input,textarea,select,.modal,nav,.mbody'));sx=c.clientX;sy=c.clientY;st=Date.now();},{passive:true});
+document.addEventListener('touchend',function(e){if(skip)return;var c=e.changedTouches[0],dx=c.clientX-sx,dy=c.clientY-sy;
+if(Date.now()-st>700||Math.abs(dx)<70||Math.abs(dx)<Math.abs(dy)*1.6)return;
+var i=IDS.indexOf((location.hash||'#home').slice(1));if(i<0)i=0;var n=dx<0?i+1:i-1;if(n<0||n>=IDS.length)return;location.hash=IDS[n];},{passive:true});
+})();
+</script>
+</body>
+</html>
